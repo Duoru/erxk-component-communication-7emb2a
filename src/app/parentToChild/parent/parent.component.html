@@ -1,5 +1,10 @@
 <span>Agree to the Terms of Service:</span> 
-<!-- toggle is the DOM HTMLINPUTELEMENT Type checkbox -->
+<!-- toggle is reference is the DOM HTMLINPUTELEMENT Type checkbox
+change is a listener handler for input event when the value Fires when the value of an <input>, <select>, or <textarea> element has been changed 
+mouseover is another listener for mouse overing on the input
+mouseleave is another listener
+the update method update the Behaviorsubject value
+and emit the value-->
 <input #toggle type="checkbox" 
 (change)="update(toggle.checked, 'enabled')" 
 (mouseover)="update(true, 'toolTip')"

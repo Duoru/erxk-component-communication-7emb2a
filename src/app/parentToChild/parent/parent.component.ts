@@ -8,14 +8,18 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
+//BehaviorSubject is a subtype of Subject class
+//BehaviorSubject using it as a source to create the obsersable , the characteristic of BehaviorSubject objects
+//they're obseravable and observers in the same time
 
-//BehaviorSubject using it as a source to create the obsersable
   private data = new BehaviorSubject({
     enabled: false,
     toolTip: false
   });
 
-  //eventStream is an observable created using method asObservable on a Subject
+  //eventStream is an observable created using method asObservable on a BehaviorSubject
+  //the observer get only the value after subscription
+  //old value before subscription are not available
   public eventStream$ = this.data.asObservable()
 
   constructor() { }
