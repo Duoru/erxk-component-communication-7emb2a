@@ -1,0 +1,8 @@
+<span>Agree to the Terms of Service:</span> 
+<!-- toggle is the DOM HTMLINPUTELEMENT Type checkbox -->
+<input #toggle type="checkbox" 
+(change)="update(toggle.checked, 'enabled')" 
+(mouseover)="update(true, 'toolTip')"
+(mouseleave)="update(false, 'toolTip')">
+<!-- bind the parent's property eventStream which's in this case is an observable to the child's property eventStream$ -->
+<app-child [eventStream]="eventStream$"></app-child>
